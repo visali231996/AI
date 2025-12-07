@@ -1,94 +1,94 @@
-Marketing Analyst Chatbot
+<b><u># Marketing Analyst Chatbot</u></b>
 
-A focused Marketing Analyst Chatbot powered by Groq LLM and built with Streamlit.
-It provides only marketing-related guidance and remembers the last 5 messages for more contextual replies.
+A focused marketing analyst chatbot powered by Groq LLM and built with Streamlit.
+It provides only marketing-related guidance and remembers the last 5 messages for accurate contextual replies.
 
-Features
+<b><u>## Features</u></b>
 
-Provides accurate marketing advice
+Provides focused marketing advice
 
-Refuses to answer non-marketing topics (finance, health, business, etc.)
+Remembers the last 5 messages using Streamlit session state
 
-Remembers last 5 messages using Streamlit session state
+Strictly refuses to answer non-marketing topics (finance, health, business, personal, etc.)
 
-Clean, interactive Streamlit UI
+Streamlit UI for structured display
 
-PDF export option for saving Q&A
+PDF export for saving question–answer sessions
 
-Thread-based error handling
+Thread-based error detection and handling
 
-Can run both in terminal and UI mode
+<b><u>## Project Structure</u></b>
 
-Project Structure
 project/
 │
-├── agent.py        # Handles LLM calls using Groq API
-├── chatbot.py      # Streamlit UI + session memory + PDF export
+├── agent.py        # Handles Groq LLM calls
+├── chatbot.py      # Streamlit UI, memory, PDF export
 ├── requirements.txt
 └── README.md
 
-agent.py
 
-Calls the Groq LLM model using an API key
+<b><u>## 1. agent.py</u></b>
 
-Collects and returns the model response
+Uses Groq API key to call the LLM
 
-Ensures the chatbot answers only marketing-related questions
+Stores the obtained output as response
 
-chatbot.py (Streamlit App)
+Ensures chatbot answers only marketing-related questions
 
-Displays the chatbot UI
+<b><u>## 2. chatbot.py</u></b>
 
-Stores the last 5 chat messages using st.session_state.history
+Uses Streamlit to display responses in a formatted UI
 
-Provides PDF export for questions and answers
+Stores chat messages in session_state.history
 
-Uses threads for error detection
+Retains only the last 5 messages
 
-Formats responses clearly
+Uses threading to detect errors
 
-Output Behavior
+Includes a PDF export option
 
-The chatbot answers only marketing-related questions, including:
+<b><u>## Output</u></b>
+
+✔ Answers to:
+
+Marketing strategy
 
 Market research
 
+Social media marketing
+
+Target audience analysis
+
 Branding
 
-SEO/SEM
+Campaign suggestions
 
-Customer segmentation
-
-Product positioning
-
-Social media strategy
-
-Campaign analysis
-
-It will not answer questions about:
+❌ Strictly refuses:
 
 Finance
 
-Business operations
+Health/medical
 
-Health
+Business operations
 
 Personal advice
 
-Technology not related to marketing
+Tech unrelated to marketing
 
-Running the Application
-Terminal Execution
+<b><u>## Running the Application</u></b>
+
+Terminal Output
 python agent.py
 
-Streamlit Interface
+Streamlit UI
 streamlit run chatbot.py
 
-PDF Export
 
-The Streamlit UI includes an option to download the conversation (questions and answers) as a PDF file.
+This opens a Streamlit interface showing the output in a structured format.
+Also includes a button to download the conversation as a PDF.
 
-Installation
+<b><u>## Installation</u></b>
+
 Clone the repository
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
@@ -96,21 +96,22 @@ cd your-repo-name
 Install dependencies
 pip install -r requirements.txt
 
-Set your Groq API key
-Windows (PowerShell)
+Set Groq API Key
+Windows:
 setx GROQ_API_KEY "your_key_here"
 
-macOS/Linux
+macOS / Linux:
 export GROQ_API_KEY="your_key_here"
 
-Tech Stack
+
+<b><u>## Tech Stack</u></b>
 
 Python 3.10+
 
-Groq LLM API
+Groq LLM
 
 Streamlit
 
-ReportLab / FPDF for PDF generation
+FPDF / ReportLab for PDF
 
-Threading for error handling
+Threading
