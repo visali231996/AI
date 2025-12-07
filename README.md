@@ -1,4 +1,4 @@
-#<b><u>Marketing Analyst Chatbot</u></b>
+<b><u>Marketing Analyst Chatbot</u></b>
 -------------
 A focused marketing analyst chatbot powered by Groq LLM and built with Streamlit.
 It provides only marketing-related guidance and remembers the last 5 messages for accurate contextual replies.
@@ -29,7 +29,8 @@ project/
 └── README.md
 
 
-<b><u>## 1. agent.py</u></b>
+<b><u>1. agent.py</u></b>
+-----------
 
 Uses Groq API key to call the LLM
 
@@ -37,7 +38,8 @@ Stores the obtained output as response
 
 Ensures chatbot answers only marketing-related questions
 
-<b><u>## 2. chatbot.py</u></b>
+<b><u>2. chatbot.py</u></b>
+----------------
 
 Uses Streamlit to display responses in a formatted UI
 
@@ -49,7 +51,8 @@ Uses threading to detect errors
 
 Includes a PDF export option
 
-<b><u>## Output</u></b>
+<b><u>Output</u></b>
+------------------
 
 ✔ Answers to:
 
@@ -77,20 +80,20 @@ Personal advice
 
 Tech unrelated to marketing
 
-<b><u>## Running the Application</u></b>
-
+<b><u> Running the Application</u></b>
+-------------
 Terminal Output
-python agent.py
+   python agent.py
 
 Streamlit UI
-streamlit run chatbot.py
+   streamlit run chatbot.py
 
 
 This opens a Streamlit interface showing the output in a structured format.
 Also includes a button to download the conversation as a PDF.
 
-<b><u>## Installation</u></b>
-
+<b><u>Installation</u></b>
+----------------
 Clone the repository
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
@@ -106,8 +109,8 @@ macOS / Linux:
 export GROQ_API_KEY="your_key_here"
 
 
-<b><u>## Tech Stack</u></b>
-
+<b><u> Tech Stack</u></b>
+-------------------
 Python 3.10+
 
 Groq LLM
