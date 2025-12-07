@@ -1,9 +1,9 @@
-<b><u># Marketing Analyst Chatbot</u></b>
+<b><u>Marketing Analyst Chatbot</u></b>
 
 A focused marketing analyst chatbot powered by Groq LLM and built with Streamlit.
 It provides only marketing-related guidance and remembers the last 5 messages for accurate contextual replies.
-
-<b><u>## Features</u></b>
+---------
+<b><u> Features</u></b>
 
 Provides focused marketing advice
 
@@ -18,6 +18,7 @@ PDF export for saving question–answer sessions
 Thread-based error detection and handling
 
 <b><u>## Project Structure</u></b>
+-----
 
 project/
 │
